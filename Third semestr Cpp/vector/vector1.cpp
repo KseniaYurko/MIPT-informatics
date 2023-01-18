@@ -1,26 +1,28 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 int main(){
     int N;
-    std::vector <double> grades(N);
+    vector <double> grades(N);
 
 // Enter variables
-    std::cout << "Input count of students:  ";
-    std::cin >> N;
+    cout << "Input count of students:  ";
+    cin >> N;
 
-    std::cout << "Input grades of students:  ";
+    cout << "Input grades of students:  ";
     for(int i = 0; i < N; i++){
         double a;
-        std::cin >> a;
+        cin >> a;
         grades.push_back(a);
     }
 
-    std::cout << "\nVector: ";
+    cout << "\nVector: ";
 
     for (auto x : grades)
-        std::cout << x << " ";
-        std::cout << "\n ";
+        cout << x << " ";
+        cout << "\n ";
 
 
 // Main programm
@@ -36,7 +38,7 @@ int main(){
     {
         if (grades[k] > sum/N)
         {
-            std::cout << grades[k] << "\n";
+            cout << grades[k] << "\n";
         }
     }
 
