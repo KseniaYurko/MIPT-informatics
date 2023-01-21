@@ -11,6 +11,20 @@ int print_vector(vector <int> &vec){
 
 }
 
+
+int standart_sort(vector <int> &vec){
+    int N = vec.size();
+    for(N - 1; N > 0; N--){
+        for(int i = 0; i < N; i++){
+            if(vec[i] > vec[i + 1]){
+                swap(vec[i], vec[i+1]);
+            }
+        }
+    }
+    return 0;
+}
+
+
 int ascending_sort(vector <int> &vec){
     int N = vec.size();
     cout << N << "\n";
@@ -52,7 +66,7 @@ int main(){
     // vector <int> vec = {3, 5, 7, 1, 8, 2, 4};
     vector <int> vec = {17, 1, 16, 2, 3, 4, 9, 8, 5, 100};
 
-    ascending_sort(vec);
+    standart_sort(vec);
     cout << "Sorted vector:  ";
     print_vector(vec);  
 
