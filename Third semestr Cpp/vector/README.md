@@ -8,7 +8,7 @@ Vector
 студентов с оценкой выше среднего.
 
 
-    ```cpp
+```cpp
         #include <iostream>
         #include <vector>
 
@@ -54,7 +54,7 @@ Vector
             }
 
         }
-    ```
+```
 
 
 
@@ -64,7 +64,7 @@ Vector
 по ссылке. полученный вектор вывести в `main`.
 
 
-    ```cpp
+```cpp
         #include <iostream>
         #include <vector>
 
@@ -103,7 +103,7 @@ Vector
 
             return 0;
         }
-    ```
+```
 
 
 
@@ -112,7 +112,7 @@ Vector
 **Task:** отсортировать `vector` по убыванию. сделать это в функции, передать по ссылке. полученный вектор вывести в `main`. с помощью `sort` **нельзя**, ручками.
 
 
-    ```cpp
+```cpp
         #include <iostream>
         #include <vector>
         using namespace std;
@@ -170,7 +170,7 @@ Vector
 
             return 0;
         }
-    ```
+```
 
 
 
@@ -179,7 +179,7 @@ Vector
 числа. На вход подается это число, длина вектора и сам вектор.
 
 
-    ```cpp
+```cpp
         #include <iostream>
         #include <vector> 
         #include "base_functions.h"
@@ -208,7 +208,7 @@ Vector
 
             return 0;
         }
-    ```
+```
 
 ## vector5_dictionary.cpp 
 **Task:** Записать три слова, введҷнные с клавиатуры в вектор, вывести их
@@ -216,7 +216,7 @@ Vector
 слове букв `о`. Тут **можно** пользоваться `sort`.
 
 
-    ```cpp
+```cpp
     #include <iostream>
     #include <vector> 
     #include <string>
@@ -256,4 +256,4 @@ Vector
         print_vector(vec);
         cout << o;
     }
-    ```
+```
