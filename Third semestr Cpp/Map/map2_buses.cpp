@@ -17,15 +17,48 @@ void BUSES_FOR_STOP(string &stop, const map <string, vector<string>> &all_buses,
     }
     
     for(const auto x: result){
-        cout << x << ", ";
+        cout << x << " ";
     }
+    cout << "\n";
 }
 
 
-void STOPS_FOR_BUS(string &bus, const map <string, vector<string>> &all_buses, const vector <string> &one_bus_list){
-    
-}
+void STOPS_FOR_BUS(string &bus, const map<string, vector<string>> &all_buses,  const vector <string> &one_bus_list){
+    int counter1 = 0;
 
+    for(auto ab: all_buses){
+        if(ab.first == bus){
+            for(auto b: ab.second){
+                cout << "Stop" << b << ":";
+
+                int counter2 = 0;
+                vector <string> v;
+                for(auto ab2: all_buses){
+                    for(auto b2: ab.second){
+                        if(b2 == b && ab2.first != bus){
+                            v.push_back(ab2.first);
+                            counter2++;
+                        }
+                    }
+                }
+
+                if(counter2 == 0) cout << "no interchache";
+                else if(counter2 > 0){
+                    for (const auto& ob : one_bus_list) { 
+                        for (auto elem : v) { 
+                            if (elem == ob) { 
+                                cout << " "  << ob;
+                            }
+                        }
+                    }
+                }
+                cout << endl;
+            }
+            counter1++;
+        }
+    }
+    if (counter1 == 0) cout << "No bus" << endl;
+}
 
 void ALL_BUSES(const map <string, vector<string>> &all_buses){
     if(all_buses.size() == 0){
@@ -39,7 +72,7 @@ void ALL_BUSES(const map <string, vector<string>> &all_buses){
                 cout << s << ";  "; 
 
             }
-            cout << "\n" << "\n";
+            cout << "\n";
         }
     }
 }
@@ -69,6 +102,8 @@ int main(){
                 cin >> stop_name;
                 all_buses[bus].push_back(stop_name);
             }
+
+            cout << bus << "\n\n";
         }
 
         else if(request == "BUSES_FOR_STOP"){
