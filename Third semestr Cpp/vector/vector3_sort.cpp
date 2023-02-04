@@ -15,7 +15,7 @@ int print_vector(vector <int> &vec){
 int standart_sort(vector <int> &vec){
     int N = vec.size();
     for(N - 1; N > 0; N--){
-        for(int i = 0; i < N; i++){
+        for(int i = 0; i < N - 1 ; i++){
             if(vec[i] > vec[i + 1]){
                 swap(vec[i], vec[i+1]);
             }

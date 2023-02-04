@@ -84,13 +84,22 @@ int main(){
     students.push_back(&st1);
     students[4] -> set_age(18);
 
-    for(int i = 0; i < 10; i++){
-        srand(time(NULL));
-        int num = rand() % (5);
+    // for(int i = 0; i < 10; i++){
+    //     srand(time(NULL));
+    //     int num = rand() % (5);
 
-        students[num]->botat();
-        cout << "\n" << num << endl;
-    }
+    //     students[num]->botat();
+    //     cout << "\n" << num << endl;
+    // }
+
+    students[0]->botat();
+    students[1]->botat();
+    students[0]->botat();
+    students[2]->botat();
+    students[0]->botat();
+    students[4]->botat();
+    students[0]->botat();
+
 
     double sum_average_score;
     for (int i = 0; i < students.size(); i++)
