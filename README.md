@@ -35,16 +35,16 @@ Two training tasks for working with maps in C++
 
 Continuing to study the C++ language
 
-## 1. Operator overloading
+## 1. Operator overloading  
 Overload operations (elementary operations, comparison operations, input/output operations) for the rational class (a class of rational fractions)
 
-1. **1_class_rational.cpp:**
+1. **1_class_rational.cpp:**  
     The main script containing the overload of all operators and function `reduction(int &a, int &b)` reducing fraction, function `change_sign(int &a, int &b)` to bring it to the standard form of rational fraction.
 
-2. **reduction.cpp:**
+2. **reduction.cpp:**  
     Description of the function that reduces the numerator and denominator.
 
-2. **test.cpp:**
+2. **test.cpp:**  
     Explanation of the topic operator overload, work in class.
 
 ## 2. 
