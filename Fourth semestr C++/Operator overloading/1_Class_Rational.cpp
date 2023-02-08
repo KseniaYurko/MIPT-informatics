@@ -127,9 +127,9 @@ ostream& operator<< (ostream& os, rational fr){
 };
 
 //enter class
-// ostream& operator>> (ostream& os, rational fr){
-//     //return os >> fr.num >> fr.denom;
-// };
+istream& operator>> (istream& in, rational fr){
+    return in >> fr.num >> fr.denom;
+};
 
 
 int main(){
@@ -138,21 +138,25 @@ int main(){
     rational fr3(13, 14);
     rational fr4(3, 7);
 
-    cout << fr1 << " " << fr2 << " " << fr3 << " " << fr4;
+    cout << "INPUT/OUTPUT OPERATIONS" << endl;
+    cout << fr1 << fr2 << fr3 << fr4;
+    rational fr;
+    cin >> fr;
+    cout << fr << endl;
 
-    // cout << "ELEMENTARY OPERATIONS" << endl;
-    // cout << fr1 << endl;
-    // cout << fr2 << endl;
-    // cout << fr1 + fr2 << " - sum" << endl;
-    // cout << fr1 - fr2 << " - substruction" << endl;
-    // cout << fr1 * fr2 << " - multiply" << endl;
-    // cout << fr1 / fr2 << " - divsion" << endl;
+    cout << "ELEMENTARY OPERATIONS" << endl;
+    cout << fr1 << fr2 << endl;
+    cout << fr1 + fr2 << " - sum" << endl;
+    cout << fr1 - fr2 << " - substruction" << endl;
+    cout << fr1 * fr2 << " - multiply" << endl;
+    cout << fr1 / fr2 << " - divsion" << endl << endl;
 
     cout << "COMPARISON OPERATIONS" << endl;
     fr3 = fr1;
     cout << fr3 << " - assigment (fr3 = fr1)" << endl;
 
     bool result = fr1 == fr2;
+    // printf("%d - comparison (fr1 == fr2)", result, fr1, fr2);
     cout << result << " - comparison (fr1 == fr2)" << endl;
 
     result = fr1 > fr2;

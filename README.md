@@ -29,3 +29,31 @@ Two training tasks for working with maps in C++
 
 </p>
 </details>
+
+<details><summary><b>Fourth semestr C++</b></summary>
+<p>
+
+Continuing to study the C++ language
+
+## Operator overloading
+Overload operations (elementary operations, comparison operations, input/output operations) for the rational class (a class of rational fractions)
+
+* ###### Elementary operations
+    - binary sum (`+`)
+    - binary substruction (`-`)
+    - binary multiply (`*`)
+    - binary division (`/`)
+
+* ###### Comparison operations
+    - assigment (`=`)
+    - comparison (`==`)
+    - more (`>`)
+    - less (`<`)
+
+* ###### Comparison operations
+    - output (`>>`)
+    - input (`<<`)
+
+
+</p>
+</details>
