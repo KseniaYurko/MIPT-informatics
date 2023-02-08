@@ -49,6 +49,7 @@ class rational {
         reduction(num, denom);
     }
 
+//ELEMENTARY OPERATIONS------------------------------------------------------------------------//
     //sum
     rational operator+ (rational fr2){
         fr2.num = num * fr2.denom + fr2.num * denom; 
@@ -85,24 +86,79 @@ class rational {
         reduction(fr3.num, fr3.denom);
         return fr3;
     }
+
+//COMPARISON OPERATIONS------------------------------------------------------------------------//
+    //assigment
+    rational operator= (rational fr2){
+        num = fr2.num; 
+        denom = fr2.denom; 
+        return fr2;
+    }
+
+    //comparison
+    bool operator== (rational fr2){
+        if(num == fr2.num && denom == fr2.denom){
+            return true;
+        }
+        else return false;
+    }
+
+    //more
+    bool operator> (rational fr2){
+        if(num * fr2.denom - fr2.num * denom > 0){
+            return true;
+        }
+        else return false; 
+    }
+
+    //less
+    bool operator< (rational fr2){
+        if(num * fr2.denom - fr2.num * denom < 0){
+            return true;
+        }
+        else return false; 
+    }
 };
 
+//INPUT/OUTPUT OPERATIONS----------------------------------------------------------------------//
 //display class
 ostream& operator<< (ostream& os, rational fr){
     return os << fr.num << "/" << fr.denom << endl;
 };
 
+//enter class
+// ostream& operator>> (ostream& os, rational fr){
+//     //return os >> fr.num >> fr.denom;
+// };
+
 
 int main(){
     rational fr1(7, 14);
     rational fr2(13, 14);
+    rational fr3(13, 14);
+    rational fr4(3, 7);
 
-    rational r1(6,15);
+    cout << fr1 << " " << fr2 << " " << fr3 << " " << fr4;
 
-    cout << fr1 << endl;
-    cout << fr2 << endl;
-    cout << fr1 + fr2 << " - sum" << endl;
-    cout << fr1 - fr2 << " - substruction" << endl;
-    cout << fr1 * fr2 << " - multiply" << endl;
-    cout << fr1 / fr2 << " - divsion" << endl;
+    // cout << "ELEMENTARY OPERATIONS" << endl;
+    // cout << fr1 << endl;
+    // cout << fr2 << endl;
+    // cout << fr1 + fr2 << " - sum" << endl;
+    // cout << fr1 - fr2 << " - substruction" << endl;
+    // cout << fr1 * fr2 << " - multiply" << endl;
+    // cout << fr1 / fr2 << " - divsion" << endl;
+
+    cout << "COMPARISON OPERATIONS" << endl;
+    fr3 = fr1;
+    cout << fr3 << " - assigment (fr3 = fr1)" << endl;
+
+    bool result = fr1 == fr2;
+    cout << result << " - comparison (fr1 == fr2)" << endl;
+
+    result = fr1 > fr2;
+    cout << result << " - more (fr1 > fr2)" << endl;
+
+    result = fr1 < fr2;
+    cout << result << " - less (fr1 < fr2)" << endl;
+
 }
