@@ -87,6 +87,40 @@ class rational {
         return fr3;
     }
 
+//INCREMENT-DECREMENT--------------------------------------------------------------------------//
+    //prefix increment
+    rational& operator++(){
+        num = num + denom;
+        return *this;
+    }
+
+    // postfix increment
+    rational operator++ (int){
+        rational fr2(num, denom);
+
+        fr2.num = num;
+        num = num + denom;
+
+        return fr2;
+        
+    }
+
+    //prefix decrement
+    rational& operator-- (){
+        num = num - denom;
+        return *this;
+    }
+
+    //postfix decrement
+    rational operator-- (int){
+        rational fr2(num, denom);
+
+        fr2.num = num;
+        num = num - denom;
+
+        return fr2;
+    }
+
 //COMPARISON OPERATIONS------------------------------------------------------------------------//
     //assigment
     rational operator= (rational fr2){
@@ -134,35 +168,48 @@ istream& operator>> (istream& in, rational fr){
 
 int main(){
     rational fr1(7, 14);
+    rational fr5(7, 14);
     rational fr2(13, 14);
     rational fr3(13, 14);
     rational fr4(3, 7);
 
     cout << "INPUT/OUTPUT OPERATIONS" << endl;
     cout << fr1 << fr2 << fr3 << fr4;
-    rational fr;
-    cin >> fr;
-    cout << fr << endl;
+    // rational fr;
+    // cin >> fr;
+    // cout << fr << endl;
 
-    cout << "ELEMENTARY OPERATIONS" << endl;
-    cout << fr1 << fr2 << endl;
-    cout << fr1 + fr2 << " - sum" << endl;
-    cout << fr1 - fr2 << " - substruction" << endl;
-    cout << fr1 * fr2 << " - multiply" << endl;
-    cout << fr1 / fr2 << " - divsion" << endl << endl;
+    // cout << "ELEMENTARY OPERATIONS" << endl;
+    // cout << fr1 << fr2 << endl;
+    // cout << fr1 + fr2 << " - sum" << endl;
+    // cout << fr1 - fr2 << " - substruction" << endl;
+    // cout << fr1 * fr2 << " - multiply" << endl;
+    // cout << fr1 / fr2 << " - divsion" << endl << endl;
 
-    cout << "COMPARISON OPERATIONS" << endl;
-    fr3 = fr1;
-    cout << fr3 << " - assigment (fr3 = fr1)" << endl;
+    // cout << "COMPARISON OPERATIONS" << endl;
+    // fr3 = fr1;
+    // cout << fr3 << " - assigment (fr3 = fr1)" << endl;
 
-    bool result = fr1 == fr2;
-    // printf("%d - comparison (fr1 == fr2)", result, fr1, fr2);
-    cout << result << " - comparison (fr1 == fr2)" << endl;
+    // bool result = fr1 == fr2;
+    // // printf("%d - comparison (fr1 == fr2)", result, fr1, fr2);
+    // cout << result << " - comparison (fr1 == fr2)" << endl;
 
-    result = fr1 > fr2;
-    cout << result << " - more (fr1 > fr2)" << endl;
+    // result = fr1 > fr2;
+    // cout << result << " - more (fr1 > fr2)" << endl;
 
-    result = fr1 < fr2;
-    cout << result << " - less (fr1 < fr2)" << endl;
+    // result = fr1 < fr2;
+    // cout << result << " - less (fr1 < fr2)" << endl;
+
+    cout << "INCREMENT-DECREMENT" << endl;
+    for(int i = 0; i < 5; i++){
+        cout << i << endl;
+        // cout << ++fr1 << " - prefix incremrnt" << endl;
+        cout << fr1++ << " - postfix incremrnt" << endl;
+        cout << ++fr5 << " - prefix incremrnt" << endl;
+        // cout << ++fr5 << " - postfix incremrnt" << endl;
+        // cout << --fr2 << " - prefix decremrnt" << endl;
+        // cout << fr1-- << " - postfix decremrnt" << endl;
+        
+    }
 
 }
