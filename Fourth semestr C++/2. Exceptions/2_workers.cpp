@@ -33,25 +33,12 @@ class worker {
             delete this;
         }
     };
-
-
-
-//FUNCTIONS OF CLASS--------------------------------------------------------------------------------//
-
-    // void doWork(){
-    //     fstream fout;
-    //     fout.open("work_result.txt", ios::app);
-    //     fout << name << " -  age: " << age << "; salary: " << salary << endl;
-    //     --salary;
-    //     fout.close();
-    // }
 };
 
 mutex g_lock;
 
 void doWork(worker &wk){
     for(int i; i < 100; i++){
-        try{
             g_lock.lock();
 
             fstream fout;
@@ -61,11 +48,6 @@ void doWork(worker &wk){
             fout.close();
 
             g_lock.unlock();
-        }
-        catch(exception &ex){
-            cout << "the worker was fired" << ex.what() << endl;
-        }
-        throw exception();
     }
     
 }
