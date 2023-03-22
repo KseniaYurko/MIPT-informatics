@@ -1,6 +1,8 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <string>
+#include <set>
 
 using namespace std;
 
@@ -9,14 +11,21 @@ bool foo (int element){
 }
 
 int main(){
-    vector<string> v = {"Ksu", "Ksusha", "David", "Ivan"};
+    // vector<string> v = {"Ksu", "Ksusha", "David", "Ivan"};
 
-    int thr = 7;
+    // vector<string>::iterator result = find_if(v.begin(), v.end(), [] (string element){
+    //     return (element[0] == 'K');
+    //     });
 
-    auto result = find_if(v.begin(), v.end(), [thr] (string element){
-        return (element[0] == 'K');
-        });
+    // result += 2;
 
-    cout << *result << endl;
+    // cout << *result << endl;
+
+    set<int> s = {1, 2, 3};
+    auto it = s.begin();
+    it++;
+
+    cout << *it << endl;
+
     return 0;
 }
